@@ -50,15 +50,29 @@ public class ConflictingIntervals {
         mergedList.addAll (secondList);
         
         // Step-3: sort the lists based on their start times
-        
         Collections.sort (mergedList, new Comparator <Interval> () {
             @Override
             public int compare (Interval i1, Interval i2) {
                 Float f1 = i1.startTime;
                 Float f2 = i2.startTime;
-                return f1.compareTo (f2);
+                if (!f1.equals (f2))
+                    return f1.compareTo (f2);
+                else {
+                    Float e1 = i1.endTime;
+                    Float e2 = i2.endTime;
+                    return e1.compareTo (e2);
+                }
             }
             });
+            
+        // Step-4: identify conflicting intervals
+        for (int i=1; i < mergedList.size(); i++) {
+            Interval currentInterval = mergedList.get (i);
+            Interval previousInterval = mergedList.get (i-1);
+            if (currentInterval.startTime >= previousInterval.startTime && currentInterval.startTime < previousInterval.endTime)
+                System.out.println (currentInterval.startTime + " - " + previousInterval.endTime);
+        }
+        
     }
 }
 
