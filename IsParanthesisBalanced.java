@@ -1,11 +1,11 @@
 /*
- Min. no. of edits needed to balance a string of parentheses
+ Check if a string of paranthesis is balanced or not
 */
 
 import java.util.*;
 import java.lang.*;
 
-public class BalanceParanthesis {
+public class IsParanthesisBalanced {
     public static void main (String args[]) {
         // Step-1: Reading inputs
         Scanner s = new Scanner(System.in);
