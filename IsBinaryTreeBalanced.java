@@ -1,3 +1,8 @@
+
+// ########## OBSELETE ######## I am gonna chnage this question and restructure the code later
+
+// ##### Check this instead:  IsAvlTree.java #######
+
 /*
 Find if a Binary Tree is balanced
 
