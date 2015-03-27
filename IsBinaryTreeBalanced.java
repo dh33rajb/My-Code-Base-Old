@@ -1,7 +1,5 @@
 /*
 Find if a Binary Tree is Balanced or not?
-            (or)
-Is the given Binary tree an AVL tree?
 
 Examples: https://www.cs.auckland.ac.nz/software/AlgAnim/AVL.html
 */
@@ -9,7 +7,7 @@ Examples: https://www.cs.auckland.ac.nz/software/AlgAnim/AVL.html
 import java.util.*;
 import java.lang.*;
 
-public class IsAvlTree {
+public class IsBinaryTreeBalanced {
     private static Node rootNode1;
     private static Node rootNode2; 
     private static boolean result;
