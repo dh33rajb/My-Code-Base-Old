@@ -4,8 +4,8 @@ Given a value k and an array, design an efficient algorithm that should output t
 Note: The below logic is my own. I have also looked for online resources for better solutions and I stumbled across this.. The Hash logic is good, will give that a shot in part 2.
 http://stackoverflow.com/questions/4720271/find-a-pair-of-elements-from-an-array-whose-sum-equals-a-given-number
 
-Core logic:
------------
+Core logic: O (n log n)
+--------------------------
 1. Sort the list..
 
 2. Keep two pointers... start one from first element, start second from last element
