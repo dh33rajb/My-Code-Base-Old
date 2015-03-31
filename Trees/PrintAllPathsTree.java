@@ -1,5 +1,5 @@
 /*
-Height of a Tree
+Print all paths in a tree
 
 Height = longest path from root node to leaf child
 
