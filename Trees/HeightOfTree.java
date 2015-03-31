@@ -9,18 +9,18 @@ Height = longest path from root node to leaf child
 Ex:
 
 Input:
-9 8 7 6 5 4 3 2 1
+2 4 0 1 8 6 7 3 9
 
 Output:
-Node value: 1 Node depth: 8Node height: 0
-Node value: 2 Node depth: 7Node height: 1
-Node value: 3 Node depth: 6Node height: 2
-Node value: 4 Node depth: 5Node height: 3
-Node value: 5 Node depth: 4Node height: 4
-Node value: 6 Node depth: 3Node height: 5
-Node value: 7 Node depth: 2Node height: 6
-Node value: 8 Node depth: 1Node height: 7
-Node value: 9 Node depth: 0Node height: 8
+Node value: 0 Node depth: 1 Node height: 1
+Node value: 1 Node depth: 2 Node height: 0
+Node value: 2 Node depth: 0 Node height: 4
+Node value: 3 Node depth: 2 Node height: 0
+Node value: 4 Node depth: 1 Node height: 3
+Node value: 6 Node depth: 3 Node height: 1
+Node value: 7 Node depth: 4 Node height: 0
+Node value: 8 Node depth: 2 Node height: 2
+Node value: 9 Node depth: 3 Node height: 0
 */
 
 import java.util.*;
