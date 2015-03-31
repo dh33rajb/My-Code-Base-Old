@@ -26,21 +26,21 @@ public class MyBST {
     public static void printInOrderTraversal (Node rootNode) {
         if (rootNode != null) {
             printInOrderTraversal (rootNode.leftChild);
-            System.out.print (rootNode.value + "-" + rootNode.height + " ");
+            System.out.print (rootNode.value + "-" + rootNode.depth + " ");
             printInOrderTraversal (rootNode.rightChild);
         }
     }
     
-    public static Node insertNode (Node rootNode, int value, int height) {
+    public static Node insertNode (Node rootNode, int value, int depth) {
         if (rootNode != null) {
-            int childHeight = height + 1;
+            int childDepth = depth + 1;
             if (value <= rootNode.value) {
-                rootNode.leftChild = insertNode (rootNode.leftChild, value, childHeight);
+                rootNode.leftChild = insertNode (rootNode.leftChild, value, childDepth);
             } else if (value > rootNode.value) {
-                rootNode.rightChild = insertNode (rootNode.rightChild, value, childHeight);
+                rootNode.rightChild = insertNode (rootNode.rightChild, value, childDepth);
             }
         } else {
-            rootNode = new Node (value, height);
+            rootNode = new Node (value, depth);
         }
         return rootNode;
     }
@@ -50,10 +50,10 @@ class Node {
     public int value;
     public Node leftChild;
     public Node rightChild;
-    public int height;
+    public int depth;
     
-    public Node (int value, int height) {
+    public Node (int value, int depth) {
         this.value = value;
-        this.height = height;
+        this.depth = depth;
     }
 }
