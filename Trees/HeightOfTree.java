@@ -46,7 +46,7 @@ public class HeightOfTree {
     public static void printInOrderTraversal (Node rootNode) {
         if (rootNode != null) {
             printInOrderTraversal (rootNode.leftChild);
-            System.out.println ("Node value: " + rootNode.value + " Node depth: " + rootNode.depth + "Node height: " + rootNode.height);
+            System.out.println ("Node value: " + rootNode.value + " Node depth: " + rootNode.depth + " Node height: " + rootNode.height);
             printInOrderTraversal (rootNode.rightChild);
         }
     }
@@ -58,15 +58,15 @@ public class HeightOfTree {
             int rightHeight = 0;
             if (value <= val) {
                 rootNode.leftChild = insertIntoTree (rootNode.leftChild, value, depth+1);
-                leftHeight = rootNode.leftChild.height;
+                leftHeight = rootNode.leftChild.height + 1;
             } else {
                 rootNode.rightChild = insertIntoTree (rootNode.rightChild, value, depth+1);
-                rightHeight = rootNode.rightChild.height;
+                rightHeight = rootNode.rightChild.height + 1;
             }
-            if (leftHeight >= rightHeight)
-                rootNode.height = leftHeight + 1;
+            if (rightHeight >= leftHeight)
+                rootNode.height = Math.max (rootNode.height, rightHeight);
             else
-                rootNode.height = rightHeight + 1;
+                rootNode.height = Math.max (rootNode.height, leftHeight);
         } else {
             rootNode = new Node (value, depth);
             rootNode.height = 0;
